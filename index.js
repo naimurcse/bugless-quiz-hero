@@ -13,6 +13,8 @@ let quizContainer = document.querySelector("#quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
 
+console.log(quizContainer);
+
 // EventListener for quiz start button
 startQuiz.addEventListener("click", () => {
    let countDown = document.querySelector("#countDownContainer");
@@ -53,13 +55,15 @@ const loadQuiz = async () => {
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
-   console.log(data);
    if (!data) {
       quizContainer.innerHTML = "";
       return;
    }
 
    data.forEach((quiz, i) => {
+      console.log(quiz);
+      console.log(i);
+
       quizContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
   <div class="flex items-center">
     <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
