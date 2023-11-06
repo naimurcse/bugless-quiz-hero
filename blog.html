@@ -343,69 +343,58 @@
                      4
                   </div>
                   <p class="text-gray-800 text-md">
-                     The difference among cookies vs local storage vs session storage.
+                     The functionality and work process of 'quizTimer'.
                   </p>
                </div>
 
                <div class="mt-5">
                   <div class="mb-5">
-                     <!-- Cookies -->
-                     <p class="text-xl font-bold text-green-700">Cookies</p>
+                     <!-- quizTimer -->
+                     <p class="text-xl font-bold text-green-700">quizTimer()</p>
                      <ul class="font-light">
+                        <li class="pt-2">This 'quizTimer' function takes only one parameter.</li>
                         <li class="pt-2">
-                           <span class="font-bold">Purpose: </span><strong>"map"</strong> is used to
-                           transform each element of an array and create a new array with the same
-                           number of elements.
+                           If the parameter return true, then "clearInterval" function will be
+                           invoked and after that it's return will stop 'quizTimer' function.
                         </li>
                         <li class="pt-2">
-                           <span class="font-bold">Behavior: </span>It iterates over every element
-                           of the array, applies a callback function to each element, and collects
-                           the return values of the callback in a new array.
-                        </li>
-                        <li class="pt-2">
-                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
-                           modify the original array.
+                           If the parameter return false, then "setInterval" function will be
+                           invoked for every 1000 ms or 1s.
                         </li>
                      </ul>
                   </div>
-                  <div class="mb-5">
-                     <!-- Local storage -->
-                     <p class="text-xl font-bold text-green-700">Local storage</p>
-                     <ul class="font-light">
-                        <li class="pt-2">
-                           <span class="font-bold">Purpose: </span><strong>"forEach"</strong> is
-                           used to iterate over an array and perform an action on each element
-                           without creating a new array.
-                        </li>
-                        <li class="pt-2">
-                           <span class="font-bold">Behavior: </span>It iterates over the array,
-                           applies a callback function to each element, and does not return a new
-                           array. It is mainly used for its side effects, like logging or updating
-                           values.
-                        </li>
-                        <li class="pt-2">
-                           <span class="font-bold">Return: </span>It doesn't returns a new array. It
-                           doesn't modify the original array.
-                        </li>
-                     </ul>
+               </div>
+            </div>
+
+            <!-- Question no: 05 -->
+            <div class="m-3 py-3 px-4 shadow-sm rounded">
+               <div class="flex items-center">
+                  <div
+                     class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3"
+                  >
+                     5
                   </div>
+                  <p class="text-gray-800 text-md">
+                     The functionality and work process of 'chooseQuiz'.
+                  </p>
+               </div>
+
+               <div class="mt-5">
                   <div class="mb-5">
-                     <!-- Session storage -->
-                     <p class="text-xl font-bold text-green-700">Session storage</p>
+                     <!-- chooseQuiz -->
+                     <p class="text-xl font-bold text-green-700">chooseQuiz()</p>
                      <ul class="font-light">
+                        <li class="pt-2">This 'chooseQuiz' function takes two parameters.</li>
                         <li class="pt-2">
-                           <span class="font-bold">Purpose: </span><strong>"filter"</strong> is used
-                           to create a new array containing elements that meet a certain condition.
+                           Firstly, try to find out similar item through id from 'answers' array and
+                           keep the value to 'isExist'.
                         </li>
                         <li class="pt-2">
-                           <span class="font-bold">Behavior: </span>It iterates over the array,
-                           applies a callback function to each element, and includes elements in the
-                           new array for which the callback returns true. It doesn't modify the
-                           original array.
-                        </li>
-                        <li class="pt-2">
-                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
-                           modify the original array.
+                           If 'isExist' content a truthy value, it will be defined a variable
+                           'serial' with initial value '0'. Then we will iterate the array 'answers'
+                           and check every element's id with isExist's id. If they matched then
+                           splice function will be applied for 'answers' array. After that "break"
+                           will executed. Outside the loop, value of 'serial' will be increase.
                         </li>
                      </ul>
                   </div>
