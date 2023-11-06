@@ -58,6 +58,7 @@
          <h2 class="text-center my-8 text-xl">FAQ Section</h2>
 
          <div>
+            <!-- Question no: 01 -->
             <div class="m-3 py-3 px-4 shadow-sm rounded">
                <div class="flex items-center">
                   <div
@@ -154,9 +155,10 @@
                   </div>
                </div>
             </div>
+
+            <!-- Question no: 02 -->
             <div class="m-3 py-3 px-4 shadow-sm rounded">
                <div class="flex items-center">
-                  <!-- Question no: 02 -->
                   <div
                      class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3"
                   >
@@ -173,18 +175,26 @@
                      <p class="text-xl font-bold text-green-700">Cookies</p>
                      <ul class="font-light">
                         <li class="pt-2">
-                           <span class="font-bold">Purpose: </span><strong>"map"</strong> is used to
-                           transform each element of an array and create a new array with the same
-                           number of elements.
+                           <span class="font-bold">Purpose: </span>Cookies are small pieces of data
+                           that can be stored in a user's browser. They are typically used for
+                           various purposes, including session management, user preferences, and
+                           tracking.
                         </li>
                         <li class="pt-2">
-                           <span class="font-bold">Behavior: </span>It iterates over every element
-                           of the array, applies a callback function to each element, and collects
-                           the return values of the callback in a new array.
+                           <span class="font-bold">Data Persistence: </span>Cookies can have both a
+                           session scope (they are deleted when the browser is closed) and a
+                           persistent scope (they are stored on the user's device for a specified
+                           duration).
+                        </li>
+
+                        <li class="pt-2">
+                           <span class="font-bold">Size Limit: </span>Cookies are limited to about
+                           4KB of data per domain.
                         </li>
                         <li class="pt-2">
-                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
-                           modify the original array.
+                           <span class="font-bold">Accessibility: </span>Cookies can be accessed
+                           both on the client and server-side. They are automatically sent with HTTP
+                           requests to the domain they are associated with.
                         </li>
                      </ul>
                   </div>
@@ -193,19 +203,24 @@
                      <p class="text-xl font-bold text-green-700">Local storage</p>
                      <ul class="font-light">
                         <li class="pt-2">
-                           <span class="font-bold">Purpose: </span><strong>"forEach"</strong> is
-                           used to iterate over an array and perform an action on each element
-                           without creating a new array.
+                           <span class="font-bold">Purpose: </span>Local Storage is a client-side
+                           web storage mechanism that allows developers to store key-value pairs of
+                           data in a user's browser for a longer period, often for application
+                           settings, user preferences, and offline caching.
                         </li>
                         <li class="pt-2">
-                           <span class="font-bold">Behavior: </span>It iterates over the array,
-                           applies a callback function to each element, and does not return a new
-                           array. It is mainly used for its side effects, like logging or updating
-                           values.
+                           <span class="font-bold">Data Persistence: </span>Data stored in Local
+                           Storage remains even after the browser is closed and is persistent across
+                           sessions. It is not limited to a single session.
                         </li>
                         <li class="pt-2">
-                           <span class="font-bold">Return: </span>It doesn't returns a new array. It
-                           doesn't modify the original array.
+                           <span class="font-bold">Size Limit: </span>Local Storage has a larger
+                           storage capacity compared to cookies, usually around 5-10MB per domain.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Accessibility: </span>Local Storage data can only
+                           be accessed on the client side via JavaScript and is not automatically
+                           sent with HTTP requests to the server.
                         </li>
                      </ul>
                   </div>
@@ -214,33 +229,118 @@
                      <p class="text-xl font-bold text-green-700">Session storage</p>
                      <ul class="font-light">
                         <li class="pt-2">
-                           <span class="font-bold">Purpose: </span><strong>"filter"</strong> is used
-                           to create a new array containing elements that meet a certain condition.
+                           <span class="font-bold">Purpose: </span>Session Storage is similar to
+                           Local Storage but has a shorter lifespan. It is often used for
+                           temporarily storing data that should be available only during a single
+                           browser session.
                         </li>
                         <li class="pt-2">
-                           <span class="font-bold">Behavior: </span>It iterates over the array,
-                           applies a callback function to each element, and includes elements in the
-                           new array for which the callback returns true. It doesn't modify the
-                           original array.
+                           <span class="font-bold">Data Persistence: </span>Data stored in Session
+                           Storage is accessible only during the current browser session. When the
+                           browser is closed, the data is deleted.
                         </li>
                         <li class="pt-2">
-                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
-                           modify the original array.
+                           <span class="font-bold">Size Limit: </span>Similar to Local Storage,
+                           Session Storage typically has a storage capacity of around 5-10MB per
+                           domain.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Accessibility: </span>Session Storage data is
+                           accessible on the client side using JavaScript, and it is not
+                           automatically sent with HTTP requests to the server.
                         </li>
                      </ul>
                   </div>
                </div>
-
-               <!-- Question no: 03 -->
             </div>
 
+            <!-- Question no: 03 -->
             <div class="m-3 py-3 px-4 shadow-sm rounded">
                <div class="flex items-center">
-                  <!-- Question no: 02 -->
                   <div
                      class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3"
                   >
-                     2
+                     3
+                  </div>
+                  <p class="text-gray-800 text-md">What is even loop and how does it work?</p>
+               </div>
+
+               <div class="mt-5">
+                  <div class="mb-5">
+                     <!-- Call Stack -->
+                     <p class="text-xl font-bold text-green-700">Call Stack</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           JavaScript code execution begins in the call stack. The call stack is a
+                           data structure that keeps track of the currently executing function or
+                           method. When a function is called, it's pushed onto the call stack, and
+                           when it returns, it's popped from the stack.
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mb-5">
+                     <!-- Callback Queue -->
+                     <p class="text-xl font-bold text-green-700">Callback Queue</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           Asynchronous operations, such as user interactions, network requests, and
+                           timers, are initiated and their corresponding callbacks are placed in a
+                           callback queue. This queue holds tasks that need to be processed once the
+                           call stack is empty.
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mb-5">
+                     <!-- Event Loop -->
+                     <p class="text-xl font-bold text-green-700">Event Loop</p>
+                     <ul class="font-light">
+                        <p>The event loop continuously checks two things:</p>
+                        <li class="pt-2">
+                           Is the call stack empty? If it is, the event loop looks at the callback
+                           queue.
+                        </li>
+                        <li class="pt-2">
+                           If there are tasks in the callback queue, it takes the first task
+                           (callback) and pushes it onto the call stack for execution.
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="mb-5">
+                     <!-- Execution -->
+                     <p class="text-xl font-bold text-green-700">Execution</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           The task in the call stack is executed, and this process continues in a
+                           loop. The event loop ensures that asynchronous tasks are executed in the
+                           order they were added to the queue, and it prevents blocking the main
+                           thread.
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="mb-5">
+                     <!-- Non-Blocking -->
+                     <p class="text-xl font-bold text-green-700">Non-Blocking</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           The key to the event loop's non-blocking behavior is that it allows
+                           JavaScript to continue executing other code or processing user
+                           interactions while waiting for asynchronous tasks to complete. This
+                           prevents the application from freezing or becoming unresponsive.
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Question no: 04 -->
+            <div class="m-3 py-3 px-4 shadow-sm rounded">
+               <div class="flex items-center">
+                  <div
+                     class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3"
+                  >
+                     4
                   </div>
                   <p class="text-gray-800 text-md">
                      The difference among cookies vs local storage vs session storage.
