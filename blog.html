@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <title>Quiz Hero | Blog</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="./index.js" defer></script>
+
+      <!-- You don't need to change noChange.js file. It's fine -->
+      <script src="./noChange.js" defer></script>
+      <!-- You don't need to change noChange.js file. It's fine -->
+
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  fontFamily: {
+                     common: ["Rubik", "sans-serif"],
+                  },
+               },
+            },
+         };
+      </script>
+   </head>
+   <body class="bg-white font-common">
+      <!-- Header/Navbar section start -->
+      <header class="h-16 flex items-center shadow-sm">
+         <nav class="flex justify-between items-center w-9/12 mx-auto">
+            <div class="text-zinc-800 font-bold uppercase">
+               <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+               <p class="text-[10px] font-normal capitalize -mt-1">
+                  Get ready to Quiz and be amazed!
+               </p>
+            </div>
+            <button class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
+               Home
+            </button>
+         </nav>
+      </header>
+      <!-- Header/Navbar section end -->
+
+      <!-- FAQ Section Start -->
+      <section class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto">
+         <h2 class="text-center my-8 text-xl">FAQ Section</h2>
+
+         <div>
+            <div class="m-3 py-3 px-4 shadow-sm rounded">
+               <div class="flex items-center">
+                  <div
+                     class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3"
+                  >
+                     1
+                  </div>
+                  <p class="text-gray-800 text-md">
+                     The difference among map vs forEach vs filter vs find.
+                  </p>
+               </div>
+               <div class="mt-5">
+                  <div class="mb-5">
+                     <!-- map -->
+                     <p class="text-xl font-bold text-green-700">map</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"map"</strong> is used to
+                           transform each element of an array and create a new array with the same
+                           number of elements.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over every element
+                           of the array, applies a callback function to each element, and collects
+                           the return values of the callback in a new array.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
+                           modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mb-5">
+                     <!-- forEach -->
+                     <p class="text-xl font-bold text-green-700">forEach</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"forEach"</strong> is
+                           used to iterate over an array and perform an action on each element
+                           without creating a new array.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over the array,
+                           applies a callback function to each element, and does not return a new
+                           array. It is mainly used for its side effects, like logging or updating
+                           values.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It doesn't returns a new array. It
+                           doesn't modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mb-5">
+                     <!-- filter -->
+                     <p class="text-xl font-bold text-green-700">filter</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"filter"</strong> is used
+                           to create a new array containing elements that meet a certain condition.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over the array,
+                           applies a callback function to each element, and includes elements in the
+                           new array for which the callback returns true. It doesn't modify the
+                           original array.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
+                           modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mb-5">
+                     <!-- find -->
+                     <p class="text-xl font-bold text-green-700">find</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"find"</strong> is used
+                           to retrieve the first element in an array that meets a specified
+                           condition.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over the array,
+                           applies a callback function to each element, and returns the first
+                           element for which the callback returns true. It stops iterating after
+                           finding the first match.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It returns the first matching
+                           data. It doesn't modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="m-3 py-3 px-4 shadow-sm rounded">
+               <div class="flex items-center">
+                  <!-- Question no: 02 -->
+                  <div
+                     class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3"
+                  >
+                     2
+                  </div>
+                  <p class="text-gray-800 text-md">
+                     The difference among cookies vs local storage vs session storage.
+                  </p>
+               </div>
+
+               <div class="mt-5">
+                  <div class="mb-5">
+                     <!-- Cookies -->
+                     <p class="text-xl font-bold text-green-700">Cookies</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"map"</strong> is used to
+                           transform each element of an array and create a new array with the same
+                           number of elements.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over every element
+                           of the array, applies a callback function to each element, and collects
+                           the return values of the callback in a new array.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
+                           modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mb-5">
+                     <!-- Local storage -->
+                     <p class="text-xl font-bold text-green-700">Local storage</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"forEach"</strong> is
+                           used to iterate over an array and perform an action on each element
+                           without creating a new array.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over the array,
+                           applies a callback function to each element, and does not return a new
+                           array. It is mainly used for its side effects, like logging or updating
+                           values.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It doesn't returns a new array. It
+                           doesn't modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mb-5">
+                     <!-- Session storage -->
+                     <p class="text-xl font-bold text-green-700">Session storage</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"filter"</strong> is used
+                           to create a new array containing elements that meet a certain condition.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over the array,
+                           applies a callback function to each element, and includes elements in the
+                           new array for which the callback returns true. It doesn't modify the
+                           original array.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
+                           modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+
+               <!-- Question no: 03 -->
+            </div>
+
+            <div class="m-3 py-3 px-4 shadow-sm rounded">
+               <div class="flex items-center">
+                  <!-- Question no: 02 -->
+                  <div
+                     class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3"
+                  >
+                     2
+                  </div>
+                  <p class="text-gray-800 text-md">
+                     The difference among cookies vs local storage vs session storage.
+                  </p>
+               </div>
+
+               <div class="mt-5">
+                  <div class="mb-5">
+                     <!-- Cookies -->
+                     <p class="text-xl font-bold text-green-700">Cookies</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"map"</strong> is used to
+                           transform each element of an array and create a new array with the same
+                           number of elements.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over every element
+                           of the array, applies a callback function to each element, and collects
+                           the return values of the callback in a new array.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
+                           modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mb-5">
+                     <!-- Local storage -->
+                     <p class="text-xl font-bold text-green-700">Local storage</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"forEach"</strong> is
+                           used to iterate over an array and perform an action on each element
+                           without creating a new array.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over the array,
+                           applies a callback function to each element, and does not return a new
+                           array. It is mainly used for its side effects, like logging or updating
+                           values.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It doesn't returns a new array. It
+                           doesn't modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="mb-5">
+                     <!-- Session storage -->
+                     <p class="text-xl font-bold text-green-700">Session storage</p>
+                     <ul class="font-light">
+                        <li class="pt-2">
+                           <span class="font-bold">Purpose: </span><strong>"filter"</strong> is used
+                           to create a new array containing elements that meet a certain condition.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Behavior: </span>It iterates over the array,
+                           applies a callback function to each element, and includes elements in the
+                           new array for which the callback returns true. It doesn't modify the
+                           original array.
+                        </li>
+                        <li class="pt-2">
+                           <span class="font-bold">Return: </span>It returns a new array. It doesn't
+                           modify the original array.
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- FAQ Section End -->
+   </body>
+</html>
