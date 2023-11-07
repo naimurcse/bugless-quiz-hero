@@ -354,12 +354,20 @@
                      <ul class="font-light">
                         <li class="pt-2">This 'quizTimer' function takes only one parameter.</li>
                         <li class="pt-2">
-                           If the parameter return true, then "clearInterval" function will be
-                           invoked and after that it's return will stop 'quizTimer' function.
+                           If the parameter returns 'true', then "clearInterval" function will be
+                           invoked and after that, its return will stop 'quizTimer' function.
                         </li>
                         <li class="pt-2">
-                           If the parameter return false, then "setInterval" function will be
+                           If the parameter returns false, then "setInterval" function will be
                            invoked for every 1000 ms or 1s.
+                        </li>
+                        <li class="pt-2">
+                           Inside the "setInterval" function, There has been a timer like a
+                           stopwatch.
+                        </li>
+                        <li class="pt-2">
+                           Inside the "setInterval" function, there is a condition for changing text
+                           color according to even and odd 'count' numbers below 60.
                         </li>
                      </ul>
                   </div>
@@ -386,15 +394,24 @@
                      <ul class="font-light">
                         <li class="pt-2">This 'chooseQuiz' function takes two parameters.</li>
                         <li class="pt-2">
-                           Firstly, try to find out similar item through id from 'answers' array and
-                           keep the value to 'isExist'.
+                           Firstly, try to find out similar items through id from 'answers' array
+                           and keep the value to 'isExist'.
                         </li>
                         <li class="pt-2">
                            If 'isExist' content a truthy value, it will be defined a variable
-                           'serial' with initial value '0'. Then we will iterate the array 'answers'
-                           and check every element's id with isExist's id. If they matched then
-                           splice function will be applied for 'answers' array. After that "break"
-                           will executed. Outside the loop, value of 'serial' will be increase.
+                           'serial' with an initial value '0'. Then we will iterate the array
+                           'answers' and check every element's id with isExist's id. If they match
+                           then the splice function will be applied for 'answers' array. After that
+                           "break" will executed. Outside the loop, value of 'serial' will be
+                           increase.
+                        </li>
+                        <li class="pt-2">
+                           If 'isExist' content a falsy value, push the given answers 'givenAns' to
+                           'answers' array.
+                        </li>
+                        <li class="pt-2">
+                           After the condition, There will be invoked the function "displayAnswers"
+                           and 'answers' as a function's argument to display data.
                         </li>
                      </ul>
                   </div>
